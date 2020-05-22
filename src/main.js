@@ -2,18 +2,16 @@ import Vue from 'vue'
 import App from './App.vue'
 
 import axios from 'axios'
+import elementUI from 'element-ui'
 
-
-// const  { changeCSVToJSON } = require('./utils/serve')
-// changeCSVToJSON('./mock/bill.csv')
-
-import { fetchData } from './utils/index'
-fetchData()
-// getData('src/mock/bill.csv')
+import './assets/css/reset.css'
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
 
 Vue.prototype.$http = axios
+
+Vue.use(elementUI)
 
 new Vue({
   render: h => h(App),
